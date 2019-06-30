@@ -14,10 +14,10 @@ values: any;
     this.getValues();
   }
 getValues() {
-  this.http.get('http://localhost:5000/api/values').subscribe(Response => {
-    this.values = Response;
+  this.http.get('http://localhost:5000/api/values').subscribe(response => {
+    this.values = response;
   }, error => {
-console.log(error);
+      console.log(error);
   });
 }
 }

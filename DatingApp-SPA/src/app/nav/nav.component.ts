@@ -12,11 +12,21 @@ model: any = {};
 
   ngOnInit() {
   }
+
 login() {
-  this.authServices.login(this.model).subscribe(next =>{
+  this.authServices.login(this.model).subscribe(next => {
     console.log('logged in successfuly');
   }, error => {
     console.log('Faild To login');
   });
+}
+loggedIn() {
+  const token = localStorage.getItem('token');
+  return !!token;
+}
+
+logout() {
+  localStorage.removeItem('token');
+  console.log('logged out');
 }
 }
