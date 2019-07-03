@@ -22,8 +22,7 @@ login() {
   });
 }
 loggedIn() {
-  const token = localStorage.getItem('token');
-  return !!token;
+  return this.authServices.loggedIn();
 }
 
 logout() {
