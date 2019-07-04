@@ -18,4 +18,5 @@ export const appRoutes: Routes = [
         ]
     },
     {path: '**', redirectTo: 'home', pathMatch: 'full'}
+// tslint:disable-next-line:semicolon
 ]
