@@ -21,7 +21,7 @@ export class MemberEditComponent implements OnInit {
    constructor(private route: ActivatedRoute, private alertify: AlertifyService) { }
 
   ngOnInit() {
-    this.route.data.subscribe(data => {this.user = data['user'];
+    this.route.data.subscribe(data => {this.user = data.user;
   });
   }
   updateUser() {
