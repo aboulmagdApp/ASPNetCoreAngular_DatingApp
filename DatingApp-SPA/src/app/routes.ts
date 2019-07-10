@@ -27,6 +27,7 @@ export const appRoutes: Routes = [
             {path: 'lists', component: ListsComponent},
         ]
     },
-    {path: '**', redirectTo: 'home', pathMatch: 'full'}
+    {path: '', component: HomeComponent, pathMatch: 'full'}
+   // {path: '**', redirectTo: 'home', pathMatch: 'full'}
 // tslint:disable-next-line:semicolon
 ]
