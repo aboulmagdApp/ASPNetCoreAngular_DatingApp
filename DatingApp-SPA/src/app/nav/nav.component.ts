@@ -32,6 +32,9 @@ loggedIn() {
 
 logout() {
   localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  this.authServices.decodedToken = null;
+  this.authServices.currentUser = null;
   this.alertify.message('logged out');
   this.router.navigate(['/home']);
 }
